@@ -1,0 +1,17 @@
+{
+  "name": "skill-distiller",
+  "version": "0.1.0",
+  "description": "上位モデルの解き方を、重みに触れずスキル1枚にまとめて下位モデルに移し、プラセボ対照つきで効果を測る",
+  "author": {
+    "name": "nigoh",
+    "url": "https://github.com/nigoh"
+  },
+  "keywords": [
+    "distillation",
+    "skills",
+    "evaluation",
+    "subagents"
+  ],
+  "repository": "https://github.com/nigoh/nok-plugins",
+  "license": "UNLICENSED"
+}

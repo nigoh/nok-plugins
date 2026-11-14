@@ -8,6 +8,7 @@
 /plugin marketplace add nigoh/nok-plugins
 /plugin install konomi@nok-plugins
 /plugin install pipe-in@nok-plugins
+/plugin install skill-distiller@nok-plugins
 ```
 
 非公開のリポジトリなので、GitHub に入れる状態（`gh auth login` など）で実行してください。
@@ -18,13 +19,14 @@
 | --- | --- | --- |
 | konomi | 好みに沿った良いフロントエンドを、要件からテストまで一貫して作る知識型スキル | 別のリポジトリ（`nigoh/konomi` の `plugin/`） |
 | pipe-in | pipe-in のパイプを会話で作る・直す・流す。成果物の検査と審査 | 別のリポジトリ（`nigoh/pipe-in` の `plugin/`） |
+| skill-distiller | 上位モデルの解き方をスキル1枚にまとめて下位モデルに移し、プラセボ対照つきで効果を測る | このリポジトリ（`plugins/skill-distiller/`） |
 
 ## フォルダの決まり
 
 | 場所 | 中身 | 配られるか |
 | --- | --- | --- |
 | `.claude-plugin/marketplace.json` | プラグインの一覧 | 一覧として読まれる |
-| `plugins/<名前>/` | ここに置くプラグインの本体。1 フォルダ 1 プラグイン（今は無い。どれも別のリポジトリにある） | 配られる（このフォルダだけ） |
+| `plugins/<名前>/` | ここに置くプラグインの本体。1 フォルダ 1 プラグイン（今は skill-distiller） | 配られる（このフォルダだけ） |
 | `templates/plugin/` | 新しいプラグインの雛形 | 配られない |
 | `scripts/` | このリポジトリの確かめ（`check.sh`） | 配られない |
 
