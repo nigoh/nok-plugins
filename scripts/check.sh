@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # このリポジトリの確かめ：マーケットプレイスと、ここに置いたプラグインの形。
-# 別のリポジトリにあるプラグイン（konomi・pipe-in）の確かめは、それぞれのリポジトリでする。
+# 別のリポジトリにあるプラグイン（konomi・pipe-in・ranbiki）の確かめは、それぞれのリポジトリでする。
 set -u; cd "$(dirname "$0")/.."; fail=0
 run() { echo "── $*"; "$@" || fail=1; }
 run claude plugin validate .
