@@ -7,6 +7,7 @@
 ```
 /plugin marketplace add nigoh/nok-plugins
 /plugin install konomi@nok-plugins
+/plugin install pipe-in@nok-plugins
 ```
 
 非公開のリポジトリなので、GitHub に入れる状態（`gh auth login` など）で実行してください。
@@ -16,6 +17,7 @@
 | 名前 | 中身 | 場所 |
 | --- | --- | --- |
 | konomi | 好みに沿った良いフロントエンドを、要件からテストまで一貫して作る知識型スキル | `plugins/konomi` |
+| pipe-in | pipe-in のパイプを会話で作る・直す・流す。成果物の検査と審査 | 別のリポジトリ（`nigoh/pipe-in` の `plugin/`） |
 
 ## フォルダの決まり
 
@@ -36,4 +38,9 @@
 3. `scripts/check.sh` を通す（`claude plugin validate` と、プラグインごとの確かめ）。
 4. 版を上げるときは `plugin.json` の `version` を変える（変えない限り、入れた人は古い版のまま）。
 
-別のリポジトリにあるプラグイン（例：pipe-in）は、`source` を `{ "source": "github", "repo": "nigoh/pipe-in" }` の形にして一覧に足せます。足す前に、そのリポジトリに `.claude-plugin/plugin.json` があることを確かめてください。
+別のリポジトリにあるプラグイン（例：pipe-in）は、`source` を別のリポジトリに向けて一覧に足せます。足す前に、向けた先に `.claude-plugin/plugin.json` があることを確かめてください。
+
+- リポジトリの直下にあるとき：`{ "source": "github", "repo": "<持ち主>/<名前>" }`
+- 下のフォルダにあるとき（pipe-in は `plugin/`）：`{ "source": "git-subdir", "url": "https://github.com/<持ち主>/<名前>.git", "path": "<フォルダ>" }`
+
+pipe-in の版は `nigoh/pipe-in` の `plugin/.claude-plugin/plugin.json` の `version` で決まります（ここでは書きません）。スキルのほかに `pipe-in-gen` コマンドも要ります（入れ方は pipe-in の `docs/guide/plugin.md`）。
