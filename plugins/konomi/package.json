@@ -1,7 +1,0 @@
-{
-  "name": "konomi-plugin-scripts",
-  "private": true,
-  "description": "konomi の点検の道具が使う依存（trace-check・bundle-budget が yaml を読む）",
-  "type": "module",
-  "dependencies": { "yaml": "^2.9.1" }
-}
