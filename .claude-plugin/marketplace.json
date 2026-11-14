@@ -10,6 +10,14 @@
       "description": "好みに沿った良いフロントエンドを、要件→設計→実装→テストまで一貫して作るための知識型スキル（日本語の画面向け）",
       "category": "design",
       "keywords": ["frontend", "design", "ui", "ux", "japanese"]
+    },
+    {
+      "name": "pipe-in",
+      "source": { "source": "git-subdir", "url": "https://github.com/nigoh/pipe-in.git", "path": "plugin" },
+      "description": "pipe-in のパイプを会話で作る・直す・流す。成果物を検査・審査し、進み具合をアーティファクトで見る（本体は nigoh/pipe-in の plugin/）",
+      "category": "development",
+      "homepage": "https://github.com/nigoh/pipe-in",
+      "keywords": ["pipe-in", "pipeline", "agents", "guard-hook", "eval"]
     }
   ]
 }
