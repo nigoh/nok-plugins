@@ -19,6 +19,14 @@
       "category": "development",
       "homepage": "https://github.com/nigoh/pipe-in",
       "keywords": ["pipe-in", "pipeline", "agents", "guard-hook", "eval"]
+    },
+    {
+      "name": "ranbiki",
+      "source": { "source": "git-subdir", "url": "https://github.com/nigoh/ranbiki.git", "path": "plugin" },
+      "description": "上位モデルの解き方を、重みに触れずスキル1枚に蒸留して下位モデルに移し、プラセボ対照つきで効果を測る（本体は nigoh/ranbiki の plugin/）",
+      "category": "development",
+      "homepage": "https://github.com/nigoh/ranbiki",
+      "keywords": ["distillation", "skills", "evaluation", "subagents"]
     }
   ]
 }
