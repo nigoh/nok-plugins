@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "./styles/tokens.css";
+
+/* 役の名前のトークンを Tailwind の語彙に対応させる。色・角丸・影・動きはここにある名前だけを使う。 */
+@theme inline {
+  --color-*: initial;
+  --color-bg: var(--bg); --color-panel: var(--panel); --color-col: var(--col);
+  --color-line: var(--line); --color-line-strong: var(--line-strong);
+  --color-fg: var(--fg); --color-muted: var(--muted);
+  --color-ai: var(--ai); --color-ai-hover: var(--ai-hover); --color-ai-soft: var(--ai-soft); --color-ai-text: var(--ai-text); --color-on-ai: var(--on-ai);
+  --color-bad: var(--bad); --color-bad-soft: var(--bad-soft); --color-bad-text: var(--bad-text);
+  --color-ok: var(--ok); --color-ok-soft: var(--ok-soft); --color-ok-text: var(--ok-text);
+  --color-warn: var(--warn); --color-warn-soft: var(--warn-soft); --color-warn-text: var(--warn-text);
+  --color-quiet: var(--quiet); --color-quiet-text: var(--quiet-text);
+  --color-disabled-bg: var(--disabled-bg); --color-disabled-fg: var(--disabled-fg);
+  --color-transparent: transparent; --color-current: currentColor;
+  --radius-*: initial;
+  --radius-tag: 6px; --radius-control: 8px; --radius-card: 12px; --radius-panel: 16px; --radius-chip: 999px;
+  --shadow-*: initial;
+  --shadow-card: var(--shadow-card); --shadow-lift: var(--shadow-lift);
+  --font-sans: var(--font);
+  /* 文字の大きさは名前で使う（text-small / text-body / text-large / text-title / text-display）。段の間は比 1.125 以上 */
+  --text-*: initial;
+  --text-small: 12px; --text-small--line-height: 1.6;
+  --text-body: 14px; --text-body--line-height: 1.6;
+  --text-large: 16px; --text-large--line-height: 1.7;
+  --text-title: 22px; --text-title--line-height: 1.4;
+  --text-display: 28px; --text-display--line-height: 1.3;
+  /* 動き：役割ごとの組。時間は tokens.css の --dur-* を使う */
+  --animate-fade-in: konomi-fade-in var(--dur-quick) var(--ease-enter) both;
+  --animate-rise-in: konomi-rise-in var(--dur-base) var(--ease-enter) both;
+  --animate-wait-in: konomi-fade-in var(--dur-instant) var(--ease-enter) var(--delay-wait) both;
+  --animate-spin-slow: konomi-spin var(--dur-spin) linear infinite;
+  --ease-enter: var(--ease-enter); --ease-exit: var(--ease-exit); --ease-move: var(--ease-move);
+}
+/* 余白は段だけを使う：1(4px) 2(8) 3(12) 4(16) 6(24) 8(32) 12(48) 20(80) */
+
+html { font-family: var(--font); background: var(--bg); color: var(--fg); }
+body { margin: 0; font-size: 14px; line-height: 1.7; }
+:focus-visible { outline: 2px solid var(--ai); outline-offset: 2px; }
+
+/* 動きの形（時間とイージングは書かない。--animate-* の側で tokens を当てる） */
+@keyframes konomi-fade-in { from { opacity: 0 } to { opacity: 1 } }
+@keyframes konomi-rise-in { from { opacity: 0; transform: translateY(var(--space-8)) } to { opacity: 1; transform: none } }
+@keyframes konomi-spin { to { transform: rotate(360deg) } }
+
+/* 数字は等幅。折り返しは禁則を厳しめに。見出しは行の長さをそろえる */
+body { line-break: strict; }
+h1, h2, h3 { text-wrap: balance; }
+dialog::backdrop { background: color-mix(in srgb, var(--fg) 40%, transparent); }

@@ -1,0 +1,99 @@
+{
+  "tool": "konomi trace-check",
+  "generatedAt": "2026-11-13T23:54:59.105Z",
+  "commit": null,
+  "status": "pass",
+  "warnings": [],
+  "docs": [
+    {
+      "screen": "SCR-001",
+      "file": "docs/screens/SCR-001-home.md",
+      "bytes": 16815,
+      "decisions": 32,
+      "arrow": 31,
+      "tried": 2
+    },
+    {
+      "screen": "SCR-002",
+      "file": "docs/screens/SCR-002-invoices.md",
+      "bytes": 16534,
+      "decisions": 36,
+      "arrow": 36,
+      "tried": 2
+    },
+    {
+      "screen": "SCR-003",
+      "file": "docs/screens/SCR-003-invoice-new.md",
+      "bytes": 19865,
+      "decisions": 32,
+      "arrow": 30,
+      "tried": 4
+    },
+    {
+      "screen": "SCR-004",
+      "file": "docs/screens/SCR-004-invoice-detail.md",
+      "bytes": 19779,
+      "decisions": 27,
+      "arrow": 24,
+      "tried": 3
+    },
+    {
+      "screen": "SCR-005",
+      "file": "docs/screens/SCR-005-clients.md",
+      "bytes": 17677,
+      "decisions": 40,
+      "arrow": 36,
+      "tried": 3
+    },
+    {
+      "screen": "SCR-006",
+      "file": "docs/screens/SCR-006-client-form.md",
+      "bytes": 19915,
+      "decisions": 32,
+      "arrow": 32,
+      "tried": 3
+    },
+    {
+      "screen": "SCR-007",
+      "file": "docs/screens/SCR-007-payments.md",
+      "bytes": 19882,
+      "decisions": 33,
+      "arrow": 32,
+      "tried": 2
+    },
+    {
+      "screen": "SCR-008",
+      "file": "docs/screens/SCR-008-report.md",
+      "bytes": 14856,
+      "decisions": 27,
+      "arrow": 27,
+      "tried": 2
+    },
+    {
+      "screen": "SCR-009",
+      "file": "docs/screens/SCR-009-settings.md",
+      "bytes": 17846,
+      "decisions": 26,
+      "arrow": 26,
+      "tried": 3
+    },
+    {
+      "screen": "SCR-010",
+      "file": "docs/screens/SCR-010-setup.md",
+      "bytes": 17732,
+      "decisions": 27,
+      "arrow": 27,
+      "tried": 3
+    }
+  ],
+  "counts": {
+    "requirements": 28,
+    "screens": 10,
+    "components": 35,
+    "modules": 9,
+    "states": 97,
+    "problems": 0,
+    "warnings": 0
+  },
+  "problems": []
+}

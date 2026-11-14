@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "nok-plugins",
+  "description": "株式会社ノックの Claude Code プラグイン置き場",
+  "owner": { "name": "nigoh", "url": "https://github.com/nigoh" },
+  "plugins": [
+    {
+      "name": "konomi",
+      "source": "./plugins/konomi",
+      "description": "好みに沿った良いフロントエンドを、要件→設計→実装→テストまで一貫して作るための知識型スキル（日本語の画面向け）",
+      "category": "design",
+      "keywords": ["frontend", "design", "ui", "ux", "japanese"]
+    }
+  ]
+}

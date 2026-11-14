@@ -1,0 +1,8 @@
+{
+  "name": "plugin-name",
+  "version": "0.1.0",
+  "description": "このプラグインが何をするかを 1 文で",
+  "author": { "name": "nigoh", "url": "https://github.com/nigoh" },
+  "repository": "https://github.com/nigoh/nok-plugins",
+  "license": "UNLICENSED"
+}

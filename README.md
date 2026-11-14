@@ -1,1 +1,39 @@
 # nok-plugins
+
+株式会社ノックの Claude Code プラグイン置き場（マーケットプレイス）です。非公開。
+
+## 使い方
+
+```
+/plugin marketplace add nigoh/nok-plugins
+/plugin install konomi@nok-plugins
+```
+
+非公開のリポジトリなので、GitHub に入れる状態（`gh auth login` など）で実行してください。
+
+## 入っているプラグイン
+
+| 名前 | 中身 | 場所 |
+| --- | --- | --- |
+| konomi | 好みに沿った良いフロントエンドを、要件からテストまで一貫して作る知識型スキル | `plugins/konomi` |
+
+## フォルダの決まり
+
+| 場所 | 中身 | 配られるか |
+| --- | --- | --- |
+| `.claude-plugin/marketplace.json` | プラグインの一覧 | 一覧として読まれる |
+| `plugins/<名前>/` | プラグイン本体。1 フォルダ 1 プラグイン | 配られる（このフォルダだけ） |
+| `templates/plugin/` | 新しいプラグインの雛形 | 配られない |
+| `lab/` | 試作した製品、振り返りの資料、質の試験 | 配られない |
+| `scripts/` | このリポジトリの確かめ（`check.sh`） | 配られない |
+
+**プラグインに製品のコードを入れない**（試作の物は `lab/` に置く）。
+
+## プラグインを足す手順
+
+1. `templates/plugin/` を `plugins/<名前>/` に写し、`.claude-plugin/plugin.json` の `name`・`description`・`version` を書く。名前は半角小文字とハイフン。`claude-` `anthropic-` で始めない。
+2. `.claude-plugin/marketplace.json` の `plugins` に 1 件足す（`name` と `source: "./plugins/<名前>"`）。
+3. `scripts/check.sh` を通す（`claude plugin validate` と、プラグインごとの確かめ）。
+4. 版を上げるときは `plugin.json` の `version` を変える（変えない限り、入れた人は古い版のまま）。
+
+別のリポジトリにあるプラグイン（例：pipe-in）は、`source` を `{ "source": "github", "repo": "nigoh/pipe-in" }` の形にして一覧に足せます。足す前に、そのリポジトリに `.claude-plugin/plugin.json` があることを確かめてください。

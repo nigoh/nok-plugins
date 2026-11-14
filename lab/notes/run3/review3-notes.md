@@ -1,0 +1,72 @@
+# 第3回の気づき（70 件）
+
+- D-06（隣の段と比1.125以上・1pxだけ違う段を作らない）と taste.md（密度の高い画面の見出しは15px、本文14px）が矛盾。15と14は比1.07。見出し16px太字に統一した。taste側を16に直すか、15の見出しを例外と書いてほしい
+- taste.mdの状態表『遅れ・止まっている＝quiet・人が何もしなくてよい』は請求書の期限超過に合わない（人が督促を判断する）。業務の状態を5つに寄せる規則に『人の次の行動が要るか』を判定の軸として足してほしい。今回は期限超過=wait（hand）にした
+- taste.mdの5つの状態に『下書き（まだ始まっていない）』が無い。calm（check）だと完了に見える。draft（pencil・quiet）の調子を足した。5つに寄せる規則に『始まっていない』を足すか検討してほしい
+- taste.mdは作業中アイコンを回すとあるが、一覧30行の送付済み札で回り続けるとA-04（動かし続けない）に反する。札の絵は止め、回るのは処理中ボタンのみにした。作業中の札を一覧で使うときの規則が無い
+- motion.mdのトークン表に、回り続ける動き（待ちの印）の周期と、骨組みを出すまでの待ち0.3秒（A-03）に当たる値が無く、--dur-spin と --delay-wait を足した。A-08の『直書き検出』を避けるには『周期・遅れ』のトークン枠が要る
+- D-05（縦に積むとき主を上）とS-10（見た目の順とDOMの順を同じに）とPC（主を右）が三つ巴。Dialogの操作帯は『やめる→主』の順でスマホも縦で主が下（親指側）にして解決したが、D-05の『下に固定する操作帯なら主を親指側』を窓の操作帯にも使えると明記してほしい
+- スマホで主操作を下に固定・PCで見出しの右に置くとき、CSSだけだとDOM順が見た目とずれる（S-10）。useMediaで置き場所ごと替える方式にしたが、structure.mdにこの場合の推奨が無い。jsdomでmatchMediaが無いのでfallbackが要る
+- trace-checkのsources.requirementsは『フォルダ』しか読めず、指示書の docs/requirements.md（ファイル）を書くとENOTDIRで落ちる。テンプレのコメントにも『フォルダ』とだけある。docs を指定して回避。ファイルも受けるか、テンプレに明記してほしい
+- trace-checkはdata-scr="SCR-001"の文字を探すが、Root（?screen=）が実行時にdata-scrを付ける作りだと文字が画面ファイルに残らない。AppShellにdata-scr（文字）・state・statesを渡す形にして解決。コードのコメントに例として書いた文字も拾われるので注意
+- trace-checkは画面固有の状態（filtered_empty等）をextra_statesに足さないとSTATE-UNKNOWN。画面の states を決め切る段で語彙が足りず18個足した。状態の語彙表に『よく出る画面固有の状態』（invalid・saving・filtered_empty・diff…）を足すと迷いが減る
+- ui-auditのA-01-press（押しても見た目が変わらない）はhover中のpressと比べるらしく、hover色=active色だと不合格。active:brightnessで分けた。またscaleはCSS scaleプロパティで書くとSNAPのtransformに出ない（Tailwind v4のscale-98が該当）。検査側かmotion.mdに『押下は色で分ける』と書いてほしい
+- ui-auditのhit-area-44は input（チェック・ラジオ・スイッチ）の見た目の大きさで測る。inputは::afterを持てないので、opacity-0の入力を44px四方に重ねる作りが要った。laws/structure.mdにチェックやスイッチの当たり判定の作り方があると早い
+- 文言の避ける言い方をテストで検査（terms.test）するのは有効だったが、avoidに英単語(invoice)を入れると識別子・slugに当たって誤検出する。avoidは日本語だけ検査する形にした。テンプレにavoidの書式（1行の配列）を決めてほしい
+- スキルの文書で役に立った: structure.mdの層表と変更シナリオ表（1〜2か所で合格の基準が設計を引き締めた）、decisions.mdのD-05/D-13（成り行きの折り返しを禁じる）、flow.mdのW-29（骨格を先に決める）、motion.mdのA-01の状態表（そのままButtonの設計になった）
+- 足りなかった: 『10人が別々に作る』ための規則。画面ファイルの決まった形、土台を書き換えない決まり、層の向きを機械で検査する方法（今回 structure.test.ts を自作）、直書き検査をテストにする方法（oxlintには任意値を止める規則が無い）が法則に無い
+- 土台1.5：kind(view/form)で主操作の置き場所を分ける規則は骨格1か所に収まり実物で効いた。入力のある画面は見出し右だとTab順(S-10)が壊れるのを番人で止められた。80%の静かな札の規則は下限未記載で6枚以上と補って適用(要明記)。
+- 土台1.5：状態名の統一(E-02)は共通語彙に寄せる作業自体は効いたが、trace-checkの正規表現[a-z_]+がstep_2を通さない。task-screen.mdにkind欄の追記が必要。画面が増えた時に状態が各REQの記述を超えて増える点は未検証。
+- setup：矛盾：W-26「多段の流れは各ステップを push（戻るで1つ前の段）」と REQ-027「画面内の切り替えは履歴に積まない」。段の移動は多段の流れなので W-26 に従い ?state=step_N を push した（Root が state を渡すので戻るで前の段に戻り、入力はそのまま）。どちらが正か README の表に無い。
+- setup：土台に足りない：画面の中だけで使うボタンの動詞（次へ進む・前の段へ戻る・設定を終える・最初からやり直す・ホームを開く・あとで登録する）が actions に無い。仮に自分の copy.ts に置いた。多段の流れを持つ画面が増えるなら『次へ進む／前の段へ戻る』は actions に上げる候補。
+- setup：土台に足りない：nav.ts に履歴に積まず置き換えて移る関数が無い。続きがある人がはじめての設定を開いたとき自動で state=resumed へ置き換えたいが、go は push のみ（戻るで resumed→default→resumed のループになる）。仮に入口側（ホーム）が下書きがあれば state=resumed を付ける前提にした。
+- setup：土台に足りない：段ごとの入力の保存先（取得の層）が無い。仮に自分のフォルダ draft.ts のメモリ、偽の保存は saveSetup.ts。useFake は『保存した入力を読む』待ち・失敗にだけ使い、値の初期化は state 名から自前で作った（useFake の data を使わなかった）。
+- setup：states.md E-01 の見直し：最後の保存が通信で失敗した場面（E-06 通信）を ?state= で出せない。saving は成功の途中の見え方で、失敗の見え方（主ボタンの上の知らせ）がテストでしか再現できない。状態名を足す場合は save_error か、共通語彙に『保存の失敗』の置き場が要る。
+- setup：guide-for-screens.md と AppShell の組み合わせの落とし穴：下に固定する帯の高さは、見えない処理中の文言（busyLabel）が長いと伸びる（375px・2 個で 1 個 167px のとき 9 字が 2 行になりボタンが 60px、帯が 94px）。AppShell の下の余白 pb-20（80px）を超え、最後の欄・ボタンの下 14px が帯に隠れる。busyLabel は 7 字以内にするか、帯の高さと余白を土台で結ぶ（余白を帯の高さから決める）べき。ui-audit の hit-area-44 で初めて見つかった。
+- setup：ui-audit の terms の検査は『発行』を一律に落とすが、terms.test.ts は制度の語（適格請求書発行事業者）を許す。2 つの検査の食い違い。登録番号の補足を制度の語を使わない言い方に変えて回避した。words.md L-01（制度の語はそのまま）と実物の検査の足並みを揃える必要がある。
+- setup：ui-audit の --spa は画面の一覧から全画面を撮る。並行作業中は他人の未完成の画面を巻き込むので、スクリプトの写しで slug を絞って 1 画面だけ測った（レポートは別のルートへ。共有の evidence を汚さない）。画面ごとに --only <slug> が欲しい。
+- setup：form.md F-06：全角数字を半角に直したとき『半角にそろえました』を出す場所が決まっていない。Field の補足は欄にフォーカスすると読まれる物なので、頭に足し、見えない role=status でも言った。部品側に『欄の注記』の口があると画面ごとの工夫が要らない。
+- setup：structure.test.ts の BT-02 は AppShell が 1 つ・data-scr が文字 1 つを要求する。ふつうに『読み込み中だけ別の枠』を作りたくなるが、AppShell の primary/secondary を状態で出し分ければ足りた。手引き 2 に『状態ごとに主・副を替える書き方』の例があると迷わない。
+- clients：filtered_empty の探す語の出どころが土台に無く、画面で 'ゆきぞら' を仮置きした。Segmented と Pagination に disabled が無く fieldset disabled で代用した。DataTable の 672px 固定で 768px の名前の列が細い。
+- invoices：土台に足りない：DataTable に aria-sort と列の畳み順が無い --note invoices：土台に足りない：Pagination に disabled が無い（fieldset disabled で代用） --note invoices：土台に足りない：nav に replace/emit が無く、画面内の URL 更新を replaceState で自前実装 --note invoices：土台に足りない：useFake の filtered_empty にデータが無く、条件を外して戻る動きを見せられない --note invoices：土台に足りない：makeManyInvoices が呼ぶたびに id と番号が変わる。sample のコメントは 34 件だが実際は 36 件 --note invoices：矛盾：screens.yaml は CMP-010(Tabs) を挙げるが D-01 は 6 択に Select を求める。none に partial と invalid が無い --note invoices：曖昧：G-04 の近い順は過ぎた入金済みを先頭に出す。混在状況の合計行は無意味。一画面に主ボタン 1 つと E-05 の空状態の主導線がぶつかる --note invoices：他画面の失敗：invoice-detail/parse.ts が M-20/G-05 に、settings/useSettingsForm.ts が DAT-03 に違反
+- client-form：土台に Radio が無く画面内で作った。AppShell の戻り・メニューに離脱ガードのフックが無い。保存失敗の状態名が無い。編集の見出し『取引先の編集』が terms に無い。F-09 の『戻る』は L-03 の2字ルールと食い違い『入力に戻る』にした。F-06 ふりがなはひらがなだがデータはカタカナ。E-07 の3回失敗の連絡先導線は未実装。
+- home：一覧画面へ渡す絞り込みの名前（status=…）が文書にないため仮置き
+- home：G-03 に残高と期間の数字を並べて比べる書き方の規則がない
+- home：E-05 と REQ-001 で、空の画面の主ボタンと上部の主ボタンが重なる扱いが食い違う
+- home：画面内の小部品に部品番号（CMP）を付けられない
+- home：入金の出来事に時刻がなく、最近の動きの並びが日付止まり
+- home：差額ありの入金を今日やることに数えるか文書にない
+- home：useFake に E-07 の自動再試行がない
+- home：W-25 の問い合わせ先の画面がない
+- home：全画面を含む単一 HTML が 327KB で 300KB 目標を超える
+- report：設計書 docs/screens/report.md はハーネスが書き込みを拒否（task-screen.md は必須とする）。本文は返答に載せた --note report：useFake に E-07 の自動 2 回再試行が無い／nav に履歴を積まない置き換えが無く useUrlParam を画面内に自作 --note report：G-11「13 行以上は畳む」と REQ-023 の取引先の全件表が衝突。表は畳まず開いた --note report：structure.test の ?? 0 は全体で 3 か所までで、settings が既に使い切り失敗中。terms.test は画面名の語を見出しの文字列に直書きできない --note report：Segmented に disabled が無く fieldset disabled で代用
+- invoice-detail：土台に足りない：操作の通信失敗（送る・取り消す・記録の失敗）に対応する状態名が無い。screens.yaml の states は 12 個で、失敗の窓は confirming／saving の中で見せるしか無かった。
+- invoice-detail：土台に足りない：actions に「下書きを削除する」が無い（画面の windows.ts に直書き）。nav.go は pushState だけで replace が無く、削除のあと一覧へ移ると、戻ると消えた請求書へ戻る。?page= は自前で replaceState した。
+- invoice-detail：土台に足りない：HistoryKind に「入金の記録を取り消した」が無い（画面だけの行を足した）。端数処理の語（切り捨て・四捨五入・切り上げ）が土台に無く、画面が持った。書き込みの結果が分からない（タイムアウト）ときに再読み込みする道が無い。
+- invoice-detail：土台に足りない：画面の中だけの部品（Facts・Totals など）に CMP-ID を付けられない。BT-02 で AppShell が index.tsx に 1 つなので、loading／error／not_found は同じ枠の中で出し分けるしかなく、フックが null の請求書を受ける形になった。
+- invoice-detail：矛盾：手引きは「ボタンの語は terms の actions から」と言うが、下書きの削除が無い。terms.test の WORDS-09 は「取引先」の直書きも落とす（screenNames から引く）ので、窓の項目名まで引く必要があり、少し厳しい。parse.ts の全角文字の直書きは structure.test に落とされ、コードポイントで書き直した。
+- invoice-detail：Stepper に「いま」の語と点線が無く、C-03 の読み替え（色だけにしない）は sr-only の語に頼った。ui-audit は Python playwright が無く実行できなかった。製品の「らしさ」の動きが決まっていない。SCR-003 の ?id= による編集は私の仮定。
+- payments：E-08（5件以上は件数と合計額）と「差額は窓にせずその場で」は両立するが、一括の窓と1件の差額確認で窓の出し分けを自分で組む必要があった。表にまとめて書いてあるとよい
+- payments：置き方の空白：更新中・古い内容で『開くだけ』の操作まで止めるか。E-04は確定する操作だけ止めると読めるが明記が無い
+- payments：L-03（ボタンは9字まで）と REQ-022 の名前『差額を手数料として確認する』（13字）が衝突。要確認で残した
+- payments：structure.test の DAT-03 が invoice-new と settings で既に落ちている（payments は無関係）
+- settings：F-01（項目 9〜20 は節）と REQ-025（区分で切り替える）が食い違う。REQ-025 を優先しタブにした（D-01 は区分 3・最長 7 字でタブに合う）。F-01 に「要件が区分を指定したら」の扱いが無い
+- settings：REQ-025 は通知を「スイッチ」と書くが、D-02・I-23（保存で確定する 2 択はスイッチにしない）と食い違う。チェックにした
+- settings：保存の失敗に当たる状態名が states の語彙に無い（saving の次が failed 相当）。保存の失敗は画面内の知らせにして、見本の状態は出していない
+- settings：ブラウザの戻る操作は止められない（beforeunload のみ）。useLeaveGuard は client-form と settings で同じ物を持っており、土台へ上げる候補
+- settings：食い違いのボタン名（相手の内容を使う・上書きして保存する）が terms に無く画面の words に置いた。SCR-003 と共通なので terms へ上げる候補
+- settings：Settings の defaultTaxRate・defaultTerms を編集する場所が、どの画面にも無い
+- settings：screens.yaml の none 理由の書き方に refreshing・stale・partial・done・offline の欄が無く、E-03 の理由の置き場が足りない
+- settings：L-03（3〜9 字）と L-05（窓の題と主ボタンは同じ動詞）が、「付け方を変える」（6 字）では収まるが、題「番号の付け方を変えますか」と動詞を揃える場合に 10 字を超える案が出て迷った
+- settings：「100.5円」の端数の例が G-05（小数の円を出さない）と緊張する。例の説明なので許したが、規則に例外の書き方が無い
+- 土台に足りない：Segmented が aria-describedby を受けないので、group の Field の補足が読み上げに結ばれない
+- settings：CMP-007・CMP-026 は使わなかった（用途が無い）
+- invoice-new：理論の食い違い：F-09 は離れる窓の副を「戻る」、L-03 は「やめる」。離れる窓では意味が揺れるので「編集に戻る」にした（送る窓の副は actions.cancel）
+- invoice-new：理論の食い違い：E-09 は「上書きする」だが、新規の請求書に上書き先は無い。競合を「選んだ取引先の支払条件が先に更新された」に読み替え、選択は「この内容で保存する」「新しい期限を使う」（9 字以内）にした
+- invoice-new：土台に足りない：保存・送るの失敗を ?state= で再現する名前が screens.yaml に無い（error は読み込みの失敗）。仮に InvoiceNew に save を差し込める口を作り、テストで失敗する関数を渡した
+- invoice-new：土台に足りない：AppShell の back（戻り）とメニューのリンクに onClick が渡せず、未保存の確かめ（F-09）は画面側で document の capture で捕まえた。ブラウザの戻るは捕まえられない（nav が popstate を画面に渡さない）。各画面で同じ物が要るので土台の離れる確かめが欲しい
+- invoice-new：土台に足りない：AppShell の secondary は 1 つの枠で、窓外の「やめる」と「下書きを保存する」を両方置けない。やめるは戻りのリンク＋離れる確かめで代えた
+- invoice-new：土台に足りない：motion.md の「足した行だけ濃さ 0→1（--dur-quick）」の道具が無い（animate-fade-in は --dur-base で全マウントに掛かる）。動きは作らず、フォーカス移動で代えた
+- invoice-new：法則に無い気づき：F-05 は金額を numeric とするが、数量は 0.5 日のような小数があるので decimal にした。ErrorSummary のリンクは非フォーカスの要素（合計の誤り）へは飛べない
+- invoice-new：作らなかったこと：F-09 の入力中の控えを端末に残す案（保存先の決めごとが土台に無い）。請求書の編集（invoice-detail からの ?id= 付きの開き方）は covers の REQ に無く、未対応
+- invoice-new：変更シナリオの実測：欄を足す S-06-7 は設計 4 か所が実際は 5。fields.ts の欄の数と LineItem の表示は型が漏れを教えない

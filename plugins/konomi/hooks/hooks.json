@@ -1,0 +1,12 @@
+{
+  "description": "konomi: 証拠レポートが無い・古い・不合格のうちは完了を止める（.konomi/screens.yaml があるリポジトリだけ）",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node", "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/evidence-gate.mjs"], "timeout": 20 }
+        ]
+      }
+    ]
+  }
+}

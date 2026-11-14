@@ -1,0 +1,3095 @@
+{
+ "tool": "konomi ui-audit",
+ "generatedAt": "2026-11-13T23:19:26.355945+00:00",
+ "commit": null,
+ "status": "pass",
+ "counts": {
+  "screens": 12,
+  "states": 108,
+  "checks": 465,
+  "problems": 0,
+  "not_run": 14
+ },
+ "screens": {
+  "probe": {
+   "scr": "SCR-000",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty",
+    "many",
+    "filtered_empty",
+    "refreshing",
+    "stale"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "probe-form": {
+   "scr": "SCR-000",
+   "states": [
+    "default",
+    "invalid",
+    "saving"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "home": {
+   "scr": "SCR-001",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty",
+    "todo_empty",
+    "many"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "invoices": {
+   "scr": "SCR-002",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty",
+    "filtered_empty",
+    "many",
+    "refreshing",
+    "stale"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "invoice-new": {
+   "scr": "SCR-003",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "invalid",
+    "confirming",
+    "saving",
+    "save_failed",
+    "conflict",
+    "many"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "invoice-detail": {
+   "scr": "SCR-004",
+   "states": [
+    "default",
+    "status_draft",
+    "status_overdue",
+    "status_paid",
+    "status_void",
+    "saving",
+    "save_failed",
+    "confirming",
+    "invalid",
+    "many",
+    "loading",
+    "error",
+    "not_found"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "clients": {
+   "scr": "SCR-005",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty",
+    "filtered_empty",
+    "many",
+    "refreshing",
+    "stale"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "client-form": {
+   "scr": "SCR-006",
+   "states": [
+    "default",
+    "mode_edit",
+    "loading",
+    "error",
+    "not_found",
+    "invalid",
+    "saving",
+    "save_failed",
+    "confirming",
+    "zip_many",
+    "zip_empty",
+    "zip_error"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "payments": {
+   "scr": "SCR-007",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty",
+    "many",
+    "candidates_empty",
+    "status_diff",
+    "confirming",
+    "partial",
+    "saving",
+    "save_failed",
+    "refreshing",
+    "stale"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "report": {
+   "scr": "SCR-008",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "empty",
+    "filtered_empty",
+    "many",
+    "partial",
+    "saving",
+    "refreshing",
+    "stale"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "settings": {
+   "scr": "SCR-009",
+   "states": [
+    "default",
+    "loading",
+    "error",
+    "invalid",
+    "saving",
+    "save_failed",
+    "confirming",
+    "conflict"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  },
+  "setup": {
+   "scr": "SCR-010",
+   "states": [
+    "default",
+    "step_2",
+    "step_3",
+    "resumed",
+    "invalid",
+    "saving",
+    "save_failed",
+    "loading",
+    "error",
+    "done"
+   ],
+   "nav": [
+    "ホーム",
+    "請求書",
+    "取引先",
+    "入金の確認",
+    "売上レポート",
+    "設定"
+   ],
+   "cmp": 0,
+   "hit_small": 0
+  }
+ },
+ "checks": [
+  {
+   "id": "lang",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "probe",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "probe",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "probe",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 9"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "probe",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "probe",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "probe",
+   "status": "pass",
+   "detail": "6 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "probe",
+   "status": "pass",
+   "detail": "6 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "probe",
+   "status": "pass",
+   "detail": "6 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "probe",
+   "status": "info",
+   "detail": "文字サイズ 4 段 [14, 16, 22, 28]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "probe",
+   "status": "info",
+   "detail": "刻みに無い余白 0/721 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "probe",
+   "status": "info",
+   "detail": "左端の線 15 本 [16, 24, 32, 64, 84, 124, 148, 188, 212, 216, 232, 240, 244, 248, 268]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "probe",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "probe",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "probe-form",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 4"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": "刻みに無い余白 0/88 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": "左端の線 1 本 [16]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "probe-form",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "home",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "home",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "home",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 5"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "home",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "home",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "home",
+   "status": "not_run",
+   "detail": "確かめられるボタンが無い"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "home",
+   "status": "info",
+   "detail": "文字サイズ 4 段 [14, 16, 22, 28]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "home",
+   "status": "info",
+   "detail": "刻みに無い余白 0/162 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "home",
+   "status": "info",
+   "detail": "左端の線 2 本 [16, 24]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "home",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "home",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "invoices",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "invoices",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "invoices",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 12"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "invoices",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "invoices",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "invoices",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "invoices",
+   "status": "info",
+   "detail": "刻みに無い余白 0/510 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "invoices",
+   "status": "info",
+   "detail": "左端の線 12 本 [16, 32, 152, 188, 196, 200, 236, 260, 268, 280, 284, 288]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "invoices",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "invoices",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "invoice-new",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 6"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": "3 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": "3 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": "3 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": "刻みに無い余白 0/161 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": "左端の線 1 本 [16]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "invoice-new",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "invoice-detail",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 8"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": "文字サイズ 4 段 [14, 16, 22, 28]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": "刻みに無い余白 0/140 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": "左端の線 2 本 [16, 32]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "invoice-detail",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "clients",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "clients",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "clients",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 10"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "clients",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "clients",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "clients",
+   "status": "not_run",
+   "detail": "確かめられるボタンが無い"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "clients",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "clients",
+   "status": "info",
+   "detail": "刻みに無い余白 0/261 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "clients",
+   "status": "info",
+   "detail": "左端の線 11 本 [16, 32, 176, 200, 204, 244, 268, 272, 284, 296, 300]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "clients",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "clients",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "client-form",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "client-form",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "client-form",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 6"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "client-form",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "client-form",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": "2 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "client-form",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "client-form",
+   "status": "info",
+   "detail": "刻みに無い余白 0/182 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "client-form",
+   "status": "info",
+   "detail": "左端の線 1 本 [16]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "client-form",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "client-form",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "payments",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "payments",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "payments",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 9"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "payments",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "payments",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "payments",
+   "status": "pass",
+   "detail": "6 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "payments",
+   "status": "pass",
+   "detail": "6 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "payments",
+   "status": "pass",
+   "detail": "6 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "payments",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "payments",
+   "status": "info",
+   "detail": "刻みに無い余白 0/352 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "payments",
+   "status": "info",
+   "detail": "左端の線 6 本 [16, 32, 80, 240, 268, 272]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "payments",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "payments",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "report",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "report",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "report",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 10"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "report",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "report",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "report",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "report",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "report",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "report",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "report",
+   "status": "info",
+   "detail": "刻みに無い余白 0/399 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "report",
+   "status": "info",
+   "detail": "左端の線 2 本 [16, 32]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "report",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "report",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-12-figure-first-screen",
+   "screen": "report",
+   "status": "info",
+   "detail": "最初の図の位置 518px（1 画面は 812px）"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "settings",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "settings",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "settings",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 6"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "settings",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "settings",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "settings",
+   "status": "pass",
+   "detail": "3 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "settings",
+   "status": "pass",
+   "detail": "3 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "settings",
+   "status": "pass",
+   "detail": "3 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "settings",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "settings",
+   "status": "info",
+   "detail": "刻みに無い余白 0/112 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "settings",
+   "status": "info",
+   "detail": "左端の線 1 本 [16]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "settings",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "settings",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "lang",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "data-scr",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "states-declared",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-hardcoded-color",
+   "screen": "setup",
+   "status": "not_run",
+   "detail": "固めたアプリでは src-lint で確かめる"
+  },
+  {
+   "id": "no-external",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "WORDS-dup",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "fixed-band-last-item",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-overflow-375",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "hit-area-44",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-font-16",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "input-label",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "axe-serious",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "no-js-error",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-interactive-nesting",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-block-in-phrasing",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-list-children",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-10-heading-order",
+   "screen": "setup",
+   "status": "info",
+   "detail": ""
+  },
+  {
+   "id": "S-10-main",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-duplicate-id",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-01-fake-button",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "S-08-css",
+   "screen": "setup",
+   "status": "info",
+   "detail": "!important 0 個、style 属性 1 個、同じ宣言のかたまりの重複 0 種、div の深さ 4"
+  },
+  {
+   "id": "A-motion-duration",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-motion-layout-props",
+   "screen": "setup",
+   "status": "info",
+   "detail": "幅・高さ・余白などを動かしている 0 か所、transition: all が 0 か所"
+  },
+  {
+   "id": "A-motion-tokens",
+   "screen": "setup",
+   "status": "info",
+   "detail": "時間のトークン 3/3 個が定義されている。くり返す動き 0 個、1 秒を超える動き 0 個"
+  },
+  {
+   "id": "A-05-reduced-motion",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-03-busy-announce",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "A-01-hover",
+   "screen": "setup",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "A-01-press",
+   "screen": "setup",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "A-01-focus",
+   "screen": "setup",
+   "status": "pass",
+   "detail": "1 個を確認"
+  },
+  {
+   "id": "D-05-button-wrap",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-05-button-height",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-01-tab-wrap",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "D-06-font-steps",
+   "screen": "setup",
+   "status": "info",
+   "detail": "文字サイズ 3 段 [14, 16, 22]"
+  },
+  {
+   "id": "D-07-spacing-scale",
+   "screen": "setup",
+   "status": "info",
+   "detail": "刻みに無い余白 0/110 か所"
+  },
+  {
+   "id": "D-08-left-edges",
+   "screen": "setup",
+   "status": "info",
+   "detail": "左端の線 1 本 [16]（375px）"
+  },
+  {
+   "id": "D-09-heading-orphan",
+   "screen": "setup",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "D-09-ellipsis",
+   "screen": "setup",
+   "status": "info",
+   "detail": "なし"
+  },
+  {
+   "id": "states-distinct",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "probe",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "probe-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "home",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "invoices",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "invoice-new",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "invoice-detail",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "clients",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "client-form",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "payments",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "report",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "settings",
+   "status": "pass",
+   "detail": ""
+  },
+  {
+   "id": "shell-nav",
+   "screen": "setup",
+   "status": "pass",
+   "detail": ""
+  }
+ ]
+}
