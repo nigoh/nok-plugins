@@ -27,6 +27,14 @@
       "category": "development",
       "homepage": "https://github.com/nigoh/ranbiki",
       "keywords": ["distillation", "skills", "evaluation", "subagents"]
+    },
+    {
+      "name": "fude",
+      "source": { "source": "git-subdir", "url": "https://github.com/nigoh/fude.git", "path": "plugin" },
+      "description": "記事を書く筆。1本の原稿をノックのサイト・Zenn・Qiita・note の形式に書き出し、公開前に文体と非公開情報の漏れを点検する（本体は nigoh/fude の plugin/）",
+      "category": "productivity",
+      "homepage": "https://github.com/nigoh/fude",
+      "keywords": ["writing", "blog", "zenn", "qiita", "note"]
     }
   ]
 }
