@@ -1,6 +1,44 @@
-# プラグインの雛形
+# plugin-name
 
-- `.claude-plugin/plugin.json`：名前・版・説明（`name` だけが必須）。
-- `skills/<名前>/SKILL.md`：スキル。frontmatter の `name` と `description` が要る。
-- 足せる物：`commands/`（コマンド）、`agents/`（エージェント）、`hooks/hooks.json`（フック）、`scripts/`（フックやスキルが呼ぶ道具）。どれもプラグインの直下に置く（`.claude-plugin/` の中に入れない）。
-- プラグインの直下に `bin/` を作らない（claude.ai 側で入れられなくなる）。直下の `CLAUDE.md` は読まれない。
+【雛形】このプラグインが何をするかを 2〜3 文で書く。誰が、どんな場面で使うと、何ができるようになるか。入れた人と、公式ディレクトリの自動の審査は、まずこの段落を読む。
+
+## 入れ方
+
+会話の中で：
+
+```
+/plugin marketplace add nigoh/nok-plugins
+/plugin install plugin-name@nok-plugins
+```
+
+非公開のリポジトリから入れるときは、GitHub に入れる状態（`gh auth login` など）で実行する。
+
+## 使い方
+
+| 呼び方 | 何をするか |
+| --- | --- |
+| `/plugin-name:example <対象>` | 【雛形】スキルの説明を 1 行で |
+
+【雛形】いちばんよくある使い方の例を 1 つ書く。
+
+## 中身
+
+| 種類 | 名前 | 役目 |
+| --- | --- | --- |
+| スキル | `example` | 【雛形】 |
+
+## 動かすもの・送るもの
+
+このプラグインが手元で動かす物と、外へ送る物をすべて書く（公式ディレクトリの安全の審査は、ここに書いていない送信や実行を問題にする）。
+
+- 手元で動かす物：【雛形】無ければ「なし」と書く（フック・MCP サーバー・スクリプト）
+- 外へ送る物：【雛形】無ければ「なし」と書く（送り先のホストと、送る中身）
+- 秘密（API キーなど）は受け取らない。受け取るときは `userConfig` の `sensitive: true` で受け取り、ここに書く。
+
+## 版と更新
+
+版は `.claude-plugin/plugin.json` の `version` で決まる。版を上げない限り、入れた人に更新は届かない。変えたことは `CHANGELOG.md` に書く。
+
+## ライセンス
+
+`.claude-plugin/plugin.json` の `license` と `LICENSE` を見る。

@@ -5,3 +5,4 @@ __pycache__/
 evidence/shots/
 .DS_Store
 *.zip
+.pytest_cache/
