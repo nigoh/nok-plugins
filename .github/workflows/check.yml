@@ -1,0 +1,40 @@
+# nok-plugins の確かめ。PR と main への push で、scripts/check.sh を引数なしで流す。
+# 権限は contents: read だけ。action は SHA で固定し、claude の版も固定する（検査の結果が、知らないうちに変わらないように）。
+# claude の版を上げるときは、手元で scripts/check.sh を通してから、下の CLAUDE_CODE_VERSION を変える。
+name: check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+env:
+  CLAUDE_CODE_VERSION: "2.1.329"
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: 道具を入れる
+        run: |
+          npm install -g "@anthropic-ai/claude-code@${CLAUDE_CODE_VERSION}"
+          python -m pip install pytest
+      - name: 全部を確かめる
+        run: scripts/check.sh

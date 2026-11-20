@@ -1,8 +1,14 @@
 {
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "plugin-name",
+  "displayName": "【雛形】表示名",
   "version": "0.1.0",
-  "description": "このプラグインが何をするかを 1 文で",
+  "description": "【雛形】このプラグインが何をするかを 1 文で。主な用途を先頭に書く",
   "author": { "name": "nigoh", "url": "https://github.com/nigoh" },
-  "repository": "https://github.com/nigoh/nok-plugins",
-  "license": "UNLICENSED"
+  "homepage": "https://github.com/nigoh/plugin-name",
+  "repository": "https://github.com/nigoh/plugin-name",
+  "supportUrl": "https://github.com/nigoh/plugin-name/issues",
+  "license": "UNLICENSED",
+  "keywords": ["【雛形】"],
+  "icon": "./.claude-plugin/icon.png"
 }

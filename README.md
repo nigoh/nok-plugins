@@ -9,6 +9,7 @@
 /plugin install konomi@nok-plugins
 /plugin install pipe-in@nok-plugins
 /plugin install ranbiki@nok-plugins
+/plugin install fude@nok-plugins
 ```
 
 非公開のリポジトリなので、GitHub に入れる状態（`gh auth login` など）で実行してください。
@@ -20,6 +21,7 @@
 | konomi | 好みに沿った良いフロントエンドを、要件からテストまで一貫して作る知識型スキル | 別のリポジトリ（`nigoh/konomi` の `plugin/`） |
 | pipe-in | pipe-in のパイプを会話で作る・直す・流す。成果物の検査と審査 | 別のリポジトリ（`nigoh/pipe-in` の `plugin/`） |
 | ranbiki | 上位モデルの解き方をスキル1枚に蒸留して下位モデルに移し、プラセボ対照つきで効果を測る | 別のリポジトリ（`nigoh/ranbiki` の `plugin/`） |
+| fude | 1本の原稿をノックのサイト・Zenn・Qiita・note の形式に書き出し、公開前に文体と非公開情報の漏れを点検する | 別のリポジトリ（`nigoh/fude` の `plugin/`） |
 
 ## フォルダの決まり
 
@@ -27,23 +29,37 @@
 | --- | --- | --- |
 | `.claude-plugin/marketplace.json` | プラグインの一覧 | 一覧として読まれる |
 | `plugins/<名前>/` | ここに置くプラグインの本体。1 フォルダ 1 プラグイン（今は無い。どれも別のリポジトリにある） | 配られる（このフォルダだけ） |
-| `templates/plugin/` | 新しいプラグインの雛形 | 配られない |
-| `scripts/` | このリポジトリの確かめ（`check.sh`） | 配られない |
+| `templates/plugin/` | 新しいプラグインの雛形（公式ディレクトリの基準を通る形） | 配られない |
+| `templates/parts/` | 要るときだけ足す部品（エージェント・フック・MCP） | 配られない |
+| `templates/repo/` | プラグインを置くリポジトリの部品（CI・`check.sh`・PR のテンプレート） | 配られない |
+| `scripts/` | このリポジトリの確かめ（`check.sh`）と、雛形との差を見る道具（`plugin_drift.py`） | 配られない |
+| `tests/` | 道具のテスト | 配られない |
 
 **プラグインに製品のコードを入れない**。試作や振り返りの資料が増えるプラグインは、別のリポジトリに分ける（konomi の試作は `nigoh/konomi` の `lab/`）。
 
 ## プラグインを足す手順
 
-1. `templates/plugin/` を `plugins/<名前>/` に写し、`.claude-plugin/plugin.json` の `name`・`description`・`version` を書く。名前は半角小文字とハイフン。`claude-` `anthropic-` で始めない。
-2. `.claude-plugin/marketplace.json` の `plugins` に 1 件足す（`name` と `source: "./plugins/<名前>"`）。
-3. `scripts/check.sh` を通す（`claude plugin validate`）。
-4. 版を上げるときは `plugin.json` の `version` を変える（変えない限り、入れた人は古い版のまま）。
+1. `templates/plugin/` を `plugins/<名前>/` に写し、`【雛形】` の印をすべて書き換える（くわしくは `templates/README.md` の「新しいプラグインを作る」）。名前は半角小文字とハイフン。`claude-` `anthropic-` で始めない。
+2. `.claude-plugin/marketplace.json` の `plugins` に 1 件足す（`name`・`source: "./plugins/<名前>"`・`description`・`category`）。
+3. `scripts/check.sh` を引数なしで通す（一覧の形・公式ディレクトリの基準・雛形との差）。
+4. 版を上げるときは `plugin.json` の `version` を変え、`CHANGELOG.md` に書く（変えない限り、入れた人は古い版のまま）。
 
-別のリポジトリにあるプラグイン（konomi・pipe-in・ranbiki）は、`source` を別のリポジトリに向けて一覧に足せます。足す前に、向けた先に `.claude-plugin/plugin.json` があることを確かめてください。
+## 雛形との差を見る
+
+`scripts/plugin_drift.py` は、プラグインが雛形の決まり（`templates/README.md` の「雛形の決まり」）からどれだけ外れているかを、決まりごとに出典つきで出します。標準ライブラリだけで動きます。公式の検査（`claude plugin validate --strict --profile directory`）も中で流し、`claude` が無ければ「未実行」として落とします。
+
+```
+python3 scripts/plugin_drift.py <プラグインのフォルダ> [...]     # 1 つずつ
+python3 scripts/plugin_drift.py --marketplace .claude-plugin/marketplace.json --workspace ..   # 一覧の全部
+```
+
+`--marketplace` では、別のリポジトリにあるプラグインを `--workspace` の下の、同じ名前のフォルダ（`../konomi/plugin` など）で探します。手元に無いプラグインは「未実行」と出ます。`--json` で結果を JSON で、`--all` で合格した決まりも、`--strict` で推奨の外れでも落とします。終わりの値は、必須の外れも未実行も無ければ 0、あれば 1 です。
+
+別のリポジトリにあるプラグイン（konomi・pipe-in・ranbiki・fude）は、`source` を別のリポジトリに向けて一覧に足せます。足す前に、向けた先に `.claude-plugin/plugin.json` があることを確かめてください。
 
 - リポジトリの直下にあるとき：`{ "source": "github", "repo": "<持ち主>/<名前>" }`
-- 下のフォルダにあるとき（konomi も pipe-in も ranbiki も `plugin/`）：`{ "source": "git-subdir", "url": "https://github.com/<持ち主>/<名前>.git", "path": "<フォルダ>" }`
+- 下のフォルダにあるとき（konomi・pipe-in・ranbiki・fude はどれも `plugin/`）：`{ "source": "git-subdir", "url": "https://github.com/<持ち主>/<名前>.git", "path": "<フォルダ>" }`
 
-版は、向けた先の `plugin/.claude-plugin/plugin.json` の `version` で決まります（ここでは書きません）。プラグインごとの確かめも、それぞれのリポジトリでします。
+版は、向けた先の `plugin/.claude-plugin/plugin.json` の `version` で決まります（ここでは書きません）。プラグインごとの確かめも、それぞれのリポジトリでします（`templates/repo/` を写すと、CI が公式ディレクトリの基準で確かめます）。
 
 pipe-in は、スキルのほかに `pipe-in-gen` コマンドも要ります（入れ方は pipe-in の `docs/guide/plugin.md`）。

@@ -1,0 +1,17 @@
+{
+  "description": "【雛形】このフックが、いつ・何を止める（または足す）かを 1 文で",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node",
+            "args": ["${CLAUDE_PLUGIN_ROOT}/hooks/example-gate.mjs"],
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
