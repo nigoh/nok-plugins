@@ -7,7 +7,7 @@
 会話の中で：
 
 ```
-/plugin marketplace add nigoh/nok-plugins
+/plugin marketplace add nok-Inc-jp/nok-plugins
 /plugin install plugin-name@nok-plugins
 ```
 

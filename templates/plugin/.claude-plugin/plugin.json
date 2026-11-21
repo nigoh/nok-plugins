@@ -5,9 +5,9 @@
   "version": "0.1.0",
   "description": "【雛形】このプラグインが何をするかを 1 文で。主な用途を先頭に書く",
   "author": { "name": "nigoh", "url": "https://github.com/nigoh" },
-  "homepage": "https://github.com/nigoh/plugin-name",
-  "repository": "https://github.com/nigoh/plugin-name",
-  "supportUrl": "https://github.com/nigoh/plugin-name/issues",
+  "homepage": "https://github.com/nok-Inc-jp/plugin-name",
+  "repository": "https://github.com/nok-Inc-jp/plugin-name",
+  "supportUrl": "https://github.com/nok-Inc-jp/plugin-name/issues",
   "license": "UNLICENSED",
   "keywords": ["【雛形】"],
   "icon": "./.claude-plugin/icon.png"
