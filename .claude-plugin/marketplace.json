@@ -35,6 +35,30 @@
       "category": "productivity",
       "homepage": "https://github.com/nok-Inc-jp/nok-fude",
       "keywords": ["writing", "blog", "zenn", "qiita", "note"]
+    },
+    {
+      "name": "fushin",
+      "source": { "source": "git-subdir", "url": "https://github.com/nok-Inc-jp/nok-fushin.git", "path": "plugin" },
+      "description": "中小企業向けの業務アプリで何を作るかを決める。業務を聞き取り、業務の型・権限表・データの分類・求める水準を業務要件シートにまとめる（本体は nok-Inc-jp/nok-fushin の plugin/）",
+      "category": "development",
+      "homepage": "https://github.com/nok-Inc-jp/nok-fushin",
+      "keywords": ["business-app", "requirements", "permissions", "data-modeling", "japanese"]
+    },
+    {
+      "name": "toryo",
+      "source": { "source": "git-subdir", "url": "https://github.com/nok-Inc-jp/nok-toryo.git", "path": "plugin" },
+      "description": "業務アプリをどう組むかを決める。業務要件シートから、アプリの形・構成の型・認証・バックアップ・運用を選び、理由つきの構成メモにまとめる（本体は nok-Inc-jp/nok-toryo の plugin/）",
+      "category": "development",
+      "homepage": "https://github.com/nok-Inc-jp/nok-toryo",
+      "keywords": ["architecture", "system-design", "infrastructure", "backup", "japanese"]
+    },
+    {
+      "name": "takumi",
+      "source": { "source": "git-subdir", "url": "https://github.com/nok-Inc-jp/nok-takumi.git", "path": "plugin" },
+      "description": "業務アプリが守れているかを確かめて報告する。設計資料から脅威を洗い出し、コードの認可と入力の抜け、秘密・依存・個人情報の扱いを見る。直さない（本体は nok-Inc-jp/nok-takumi の plugin/）",
+      "category": "security",
+      "homepage": "https://github.com/nok-Inc-jp/nok-takumi",
+      "keywords": ["security", "threat-modeling", "authorization", "code-review", "japanese"]
     }
   ]
 }

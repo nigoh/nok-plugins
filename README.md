@@ -10,6 +10,9 @@
 /plugin install pipe-in@nok-plugins
 /plugin install ranbiki@nok-plugins
 /plugin install fude@nok-plugins
+/plugin install fushin@nok-plugins
+/plugin install toryo@nok-plugins
+/plugin install takumi@nok-plugins
 ```
 
 非公開のリポジトリなので、GitHub に入れる状態（`gh auth login` など）で実行してください。
@@ -22,6 +25,9 @@
 | pipe-in | pipe-in のパイプを会話で作る・直す・流す。成果物の検査と審査 | 別のリポジトリ（`nok-Inc-jp/nok-pipe-in` の `plugin/`） |
 | ranbiki | 上位モデルの解き方をスキル1枚に蒸留して下位モデルに移し、プラセボ対照つきで効果を測る | 別のリポジトリ（`nok-Inc-jp/nok-ranbiki` の `plugin/`） |
 | fude | 1本の原稿をノックのサイト・Zenn・Qiita・note の形式に書き出し、公開前に文体と非公開情報の漏れを点検する | 別のリポジトリ（`nok-Inc-jp/nok-fude` の `plugin/`） |
+| fushin | 中小企業向けの業務アプリで何を作るかを決め、業務要件シートにまとめる | 別のリポジトリ（`nok-Inc-jp/nok-fushin` の `plugin/`） |
+| toryo | 業務要件シートから、業務アプリをどう組むか（形・構成・認証・バックアップ・運用）を決める | 別のリポジトリ（`nok-Inc-jp/nok-toryo` の `plugin/`） |
+| takumi | 業務アプリが守れているかを確かめて報告する（直さない） | 別のリポジトリ（`nok-Inc-jp/nok-takumi` の `plugin/`） |
 
 ## フォルダの決まり
 
