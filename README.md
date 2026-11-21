@@ -5,7 +5,7 @@
 ## 使い方
 
 ```
-/plugin marketplace add nigoh/nok-plugins
+/plugin marketplace add nok-Inc-jp/nok-plugins
 /plugin install konomi@nok-plugins
 /plugin install pipe-in@nok-plugins
 /plugin install ranbiki@nok-plugins
@@ -21,10 +21,10 @@
 
 | 名前 | 中身 | 場所 |
 | --- | --- | --- |
-| konomi | 好みに沿った良いフロントエンドを、要件からテストまで一貫して作る知識型スキル | 別のリポジトリ（`nigoh/konomi` の `plugin/`） |
-| pipe-in | pipe-in のパイプを会話で作る・直す・流す。成果物の検査と審査 | 別のリポジトリ（`nigoh/pipe-in` の `plugin/`） |
-| ranbiki | 上位モデルの解き方をスキル1枚に蒸留して下位モデルに移し、プラセボ対照つきで効果を測る | 別のリポジトリ（`nigoh/ranbiki` の `plugin/`） |
-| fude | 1本の原稿をノックのサイト・Zenn・Qiita・note の形式に書き出し、公開前に文体と非公開情報の漏れを点検する | 別のリポジトリ（`nigoh/fude` の `plugin/`） |
+| konomi | 好みに沿った良いフロントエンドを、要件からテストまで一貫して作る知識型スキル | 別のリポジトリ（`nok-Inc-jp/nok-konomi` の `plugin/`） |
+| pipe-in | pipe-in のパイプを会話で作る・直す・流す。成果物の検査と審査 | 別のリポジトリ（`nok-Inc-jp/nok-pipe-in` の `plugin/`） |
+| ranbiki | 上位モデルの解き方をスキル1枚に蒸留して下位モデルに移し、プラセボ対照つきで効果を測る | 別のリポジトリ（`nok-Inc-jp/nok-ranbiki` の `plugin/`） |
+| fude | 1本の原稿をノックのサイト・Zenn・Qiita・note の形式に書き出し、公開前に文体と非公開情報の漏れを点検する | 別のリポジトリ（`nok-Inc-jp/nok-fude` の `plugin/`） |
 | fushin | 中小企業向けの業務アプリで何を作るかを決め、業務要件シートにまとめる | 別のリポジトリ（`nok-Inc-jp/nok-fushin` の `plugin/`） |
 | toryo | 業務要件シートから、業務アプリをどう組むか（形・構成・認証・バックアップ・運用）を決める | 別のリポジトリ（`nok-Inc-jp/nok-toryo` の `plugin/`） |
 | takumi | 業務アプリが守れているかを確かめて報告する（直さない） | 別のリポジトリ（`nok-Inc-jp/nok-takumi` の `plugin/`） |
@@ -41,7 +41,7 @@
 | `scripts/` | このリポジトリの確かめ（`check.sh`）と、雛形との差を見る道具（`plugin_drift.py`） | 配られない |
 | `tests/` | 道具のテスト | 配られない |
 
-**プラグインに製品のコードを入れない**。試作や振り返りの資料が増えるプラグインは、別のリポジトリに分ける（konomi の試作は `nigoh/konomi` の `lab/`）。
+**プラグインに製品のコードを入れない**。試作や振り返りの資料が増えるプラグインは、別のリポジトリに分ける（konomi の試作は `nok-Inc-jp/nok-konomi` の `lab/`）。
 
 ## プラグインを足す手順
 

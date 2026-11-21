@@ -6,34 +6,34 @@
   "plugins": [
     {
       "name": "konomi",
-      "source": { "source": "git-subdir", "url": "https://github.com/nigoh/konomi.git", "path": "plugin" },
-      "description": "好みに沿った良いフロントエンドを、要件→設計→実装→テストまで一貫して作るための知識型スキル（日本語の画面向け。本体は nigoh/konomi の plugin/）",
+      "source": { "source": "git-subdir", "url": "https://github.com/nok-Inc-jp/nok-konomi.git", "path": "plugin" },
+      "description": "好みに沿った良いフロントエンドを、要件→設計→実装→テストまで一貫して作るための知識型スキル（日本語の画面向け。本体は nok-Inc-jp/nok-konomi の plugin/）",
       "category": "design",
-      "homepage": "https://github.com/nigoh/konomi",
+      "homepage": "https://github.com/nok-Inc-jp/nok-konomi",
       "keywords": ["frontend", "design", "ui", "ux", "japanese"]
     },
     {
       "name": "pipe-in",
-      "source": { "source": "git-subdir", "url": "https://github.com/nigoh/pipe-in.git", "path": "plugin" },
-      "description": "pipe-in のパイプを会話で作る・直す・流す。成果物を検査・審査し、進み具合をアーティファクトで見る（本体は nigoh/pipe-in の plugin/）",
+      "source": { "source": "git-subdir", "url": "https://github.com/nok-Inc-jp/nok-pipe-in.git", "path": "plugin" },
+      "description": "pipe-in のパイプを会話で作る・直す・流す。成果物を検査・審査し、進み具合をアーティファクトで見る（本体は nok-Inc-jp/nok-pipe-in の plugin/）",
       "category": "development",
-      "homepage": "https://github.com/nigoh/pipe-in",
+      "homepage": "https://github.com/nok-Inc-jp/nok-pipe-in",
       "keywords": ["pipe-in", "pipeline", "agents", "guard-hook", "eval"]
     },
     {
       "name": "ranbiki",
-      "source": { "source": "git-subdir", "url": "https://github.com/nigoh/ranbiki.git", "path": "plugin" },
-      "description": "上位モデルの解き方を、重みに触れずスキル1枚に蒸留して下位モデルに移し、プラセボ対照つきで効果を測る（本体は nigoh/ranbiki の plugin/）",
+      "source": { "source": "git-subdir", "url": "https://github.com/nok-Inc-jp/nok-ranbiki.git", "path": "plugin" },
+      "description": "上位モデルの解き方を、重みに触れずスキル1枚に蒸留して下位モデルに移し、プラセボ対照つきで効果を測る（本体は nok-Inc-jp/nok-ranbiki の plugin/）",
       "category": "development",
-      "homepage": "https://github.com/nigoh/ranbiki",
+      "homepage": "https://github.com/nok-Inc-jp/nok-ranbiki",
       "keywords": ["distillation", "skills", "evaluation", "subagents"]
     },
     {
       "name": "fude",
-      "source": { "source": "git-subdir", "url": "https://github.com/nigoh/fude.git", "path": "plugin" },
-      "description": "記事を書く筆。1本の原稿をノックのサイト・Zenn・Qiita・note の形式に書き出し、公開前に文体と非公開情報の漏れを点検する（本体は nigoh/fude の plugin/）",
+      "source": { "source": "git-subdir", "url": "https://github.com/nok-Inc-jp/nok-fude.git", "path": "plugin" },
+      "description": "記事を書く筆。1本の原稿をノックのサイト・Zenn・Qiita・note の形式に書き出し、公開前に文体と非公開情報の漏れを点検する（本体は nok-Inc-jp/nok-fude の plugin/）",
       "category": "productivity",
-      "homepage": "https://github.com/nigoh/fude",
+      "homepage": "https://github.com/nok-Inc-jp/nok-fude",
       "keywords": ["writing", "blog", "zenn", "qiita", "note"]
     },
     {
